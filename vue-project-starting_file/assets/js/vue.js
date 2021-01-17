@@ -20,7 +20,14 @@ const ShoppingCart = {
 }
 
 //Router
-const router = new VueRouter;
+const router = new VueRouter({
+  routes: [
+    { path: '/', component: Home, name: 'Home' },
+    { path: '/user-settings', component: UserSettings, name: 'UserSettings' },
+    { path: '/wish-list', component: WishList, name: 'WishList' },
+    { path: '/shopping-cart', component: ShoppingCart, name: 'ShoppingCart' },
+  ]
+});
 
 //Instance de vue
 const vue = new Vue({
