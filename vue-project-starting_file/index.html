@@ -51,11 +51,11 @@
       <div class="home-container">
         <h1>Articles</h1>
         <!-- Search Display -->
-
+          <input v-model="searchKey" type="search" id="search" placeholder="Rechercher..." autocomplete="off">
         <!-- cards diplay -->
         <div class="card-cart-container">
           <div class="card-container">
-            <div v-for="product in products" class="card">
+            <div v-for="product in filterList" class="card">
               <div class="img-container">
                 <img v-bind:src="product.img">
               </div>
